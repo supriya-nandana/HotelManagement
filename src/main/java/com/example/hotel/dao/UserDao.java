@@ -8,6 +8,11 @@ import com.example.hotel.model.User;
 @Repository
 public interface UserDao extends CrudRepository<User, Integer> {
 
+	/**
+	 * @param userName
+	 * @param password
+	 * @return  user logged in
+	 */
 	User findByUserNameAndPassword(String userName, String password);
 
 	
