@@ -18,6 +18,11 @@ public class UserController {
 	@Autowired
 	UserService userService;
 	
+	/**
+	 * @param credentials
+	 * @return user logged in
+	 * @throws InvalidCredentialsException
+	 */
 	@PostMapping("/login")
 	public String login(@RequestBody Credentials credentials) throws InvalidCredentialsException
 	{

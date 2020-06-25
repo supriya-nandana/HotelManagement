@@ -15,6 +15,10 @@ public class BookingController {
 	@Autowired
 	BookService bookService;
 	
+	/**
+	 * @param bookRequestDto
+	 * @return booking details
+	 */
 	@PostMapping("/bookroom")
 	public BookResponseDto bookRoom(@RequestBody BookRequestDto bookRequestDto) {
 		return bookService.getBookingdetails(bookRequestDto);
