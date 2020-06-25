@@ -19,17 +19,6 @@ public class RoomServiceImpl implements RoomService {
 
 	@Autowired
 	RoomDao roomDao;
-	/*
-	@Override
-	public List<RoomsResponseDto> getRoomByHotelId(int hotelId) throws RoomNotFoundException {
-		Optional<List<HotelRooms>> roomsOptional = roomDao.findAllByHotelId(hotelId);
-		List<RoomsResponseDto> responseDto=new ArrayList<RoomsResponseDto>();
-		if(roomsOptional.isPresent()) {
-			BeanUtils.copyProperties(roomsOptional.get(), responseDto);
-			return responseDto;
-		}
-		throw new RoomNotFoundException("There Exists No rooms with the given Id:"+hotelId);
-	}*/
 	
 	@Override
 	public List<RoomsResponseDto> getRoomByHotelId(int hotelId) throws RoomNotFoundException {
@@ -44,7 +33,6 @@ public class RoomServiceImpl implements RoomService {
 	private RoomsResponseDto getOrderResponse(HotelRooms hotelrooms) {
 		RoomsResponseDto responsedto=new RoomsResponseDto();
 		BeanUtils.copyProperties(hotelrooms, responsedto);
-		//responsedto.setProductName(roomDao.findProductNameByproductid(order.getProductid()));
 		return responsedto;
 	}
 
