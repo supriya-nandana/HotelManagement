@@ -12,6 +12,10 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	UserDao userDao;
 
+	/**
+	 * throws InvalidCredentialsException
+	 *
+	 */
 	@Override
 	public boolean authenticate(String userName, String password) throws InvalidCredentialsException {
 		User user=userDao.findByUserNameAndPassword(userName, password);

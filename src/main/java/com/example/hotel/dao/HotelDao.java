@@ -10,6 +10,10 @@ import org.springframework.stereotype.Repository;
 
 import com.example.hotel.model.Hotels;
 
+/**
+ * @author manasa
+ *
+ */
 @Repository
 public interface HotelDao extends CrudRepository<Hotels, Integer> {
 

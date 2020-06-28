@@ -1,6 +1,11 @@
 package com.example.hotel.dto;
 
+/**
+ * @author manasa
+ *
+ */
 public class Credentials {
+	//This is a credentials dto class
 	
 	private String userName;
 	private String password;
